@@ -9,10 +9,12 @@ function login(){
         password : pass
     };
     obj = JSON.stringify(obj)
-    fetch('http://localhost:3500/login',{
+    fetch('https://evening-bastion-10980.herokuapp.com/login',{
         method: 'POST', 
         headers: {
-          'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Headers' :  "*",
+            'Access-Control-Allow-Origin': "*"
         },
         body: obj,
     })

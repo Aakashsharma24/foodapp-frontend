@@ -10,10 +10,12 @@ function register(){
         username
     };
     obj = JSON.stringify(obj)
-    fetch('http://localhost:3500/register',{
+    fetch('https://evening-bastion-10980.herokuapp.com/register',{
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Headers' :  "*",
+          'Access-Control-Allow-Origin': "*"
         },
         body: obj,
     })
